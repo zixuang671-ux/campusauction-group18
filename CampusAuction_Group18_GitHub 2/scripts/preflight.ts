@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import { network } from 'hardhat';
+const { ethers } = await network.connect('hardhat');
+const [seller,buyer] = await ethers.getSigners();
+const nft = await ethers.deployContract('CampusSouvenirNFT');await nft.waitForDeployment();await(await nft.mint(seller.address)).wait();
+const a = await ethers.deployContract('CampusAuction',[await nft.getAddress(),0,ethers.parseEther('0.01'),ethers.parseEther('0.001'),30,ethers.parseEther('0.002'),300]);await a.waitForDeployment();
+await(await nft.approve(await a.getAddress(),0)).wait();assert.equal(await nft.getApproved(0),await a.getAddress());await(await a.startAuction()).wait();assert.equal(await nft.ownerOf(0),await a.getAddress());
+await(await a.connect(buyer).buy({value:ethers.parseEther('0.012')})).wait();assert.equal(await a.status(),2n);assert.equal(await nft.ownerOf(0),buyer.address);
+const finalPrice=await a.finalPrice();assert.equal(await a.pendingWithdrawals(seller.address),finalPrice);assert.equal(await a.pendingWithdrawals(buyer.address),ethers.parseEther('0.012')-finalPrice);
+await(await a.connect(buyer).withdraw()).wait();await(await a.withdraw()).wait();assert.equal(await a.pendingWithdrawals(seller.address),0n);assert.equal(await a.pendingWithdrawals(buyer.address),0n);
+console.log('PASS: P3 contracts deploy, mint, approve, start, purchase, ownership, seller proceeds and buyer refund. Ephemeral local network only; no Sepolia transactions.');

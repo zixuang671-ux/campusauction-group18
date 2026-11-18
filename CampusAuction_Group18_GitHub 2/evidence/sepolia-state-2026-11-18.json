@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-11-18T06:33:12.891Z",
+  "blockNumber": 12159717,
+  "blockTime": 1794983580,
+  "chainId": 11155111,
+  "items": [
+    {
+      "id": "mug",
+      "tokenId": 0,
+      "startPrice": "0.010",
+      "minPrice": "0.002",
+      "address": "0x06403756b56bec4aD972d4EAE32ad81CB2C25508",
+      "status": 0,
+      "winner": "0x0000000000000000000000000000000000000000",
+      "finalPrice": "0.0",
+      "sellerClaimable": "0.0",
+      "startTime": 0,
+      "endTime": 0,
+      "owner": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+      "approval": "0x06403756b56bec4aD972d4EAE32ad81CB2C25508",
+      "sales": []
+    },
+    {
+      "id": "bag",
+      "tokenId": 1,
+      "startPrice": "0.008",
+      "minPrice": "0.002",
+      "address": "0x2DbFd737b7203C7E750283e4df1Bd92892Ce2F42",
+      "status": 0,
+      "winner": "0x0000000000000000000000000000000000000000",
+      "finalPrice": "0.0",
+      "sellerClaimable": "0.0",
+      "startTime": 0,
+      "endTime": 0,
+      "owner": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+      "approval": "0x2DbFd737b7203C7E750283e4df1Bd92892Ce2F42",
+      "sales": []
+    },
+    {
+      "id": "pin",
+      "tokenId": 2,
+      "startPrice": "0.006",
+      "minPrice": "0.002",
+      "address": "0x0AD92b4e79D0fA1153c3bd115cF670058745abBc",
+      "status": 2,
+      "winner": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+      "finalPrice": "0.004",
+      "sellerClaimable": "0.006",
+      "startTime": 1794939936,
+      "endTime": 1794940836,
+      "owner": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+      "approval": "0x0000000000000000000000000000000000000000",
+      "sales": [
+        {
+          "hash": "0x98e55e5af9b7d35fcc4068f6c7a726cb4d7b40c2a333958445b53ffeb3b2a2d5",
+          "buyer": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+          "price": "0.004",
+          "blockNumber": 12156165,
+          "status": 1,
+          "gasUsed": "300820",
+          "paid": "0.006"
+        }
+      ],
+      "withdrawals": []
+    },
+    {
+      "id": "bookmark",
+      "tokenId": 3,
+      "startPrice": "0.004",
+      "minPrice": "0.002",
+      "address": "0xB194b7bb6f3195B5DCb71f5C8C408060e5ef95b1",
+      "status": 2,
+      "winner": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+      "finalPrice": "0.004",
+      "sellerClaimable": "0.0",
+      "startTime": 1794939780,
+      "endTime": 1794940680,
+      "owner": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+      "approval": "0x0000000000000000000000000000000000000000",
+      "sales": [
+        {
+          "hash": "0xe0cbe77c17453f61d73fc050fb2b7d21cfbf3fc0a74bbea071610b541742d41d",
+          "buyer": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+          "price": "0.004",
+          "blockNumber": 12156149,
+          "status": 1,
+          "gasUsed": "300322",
+          "paid": "0.004"
+        }
+      ],
+      "withdrawals": [
+        {
+          "hash": "0xf851822ff06754949a2ee1569e95172ad84a075b693b9df6f289675179c6165f",
+          "recipient": "0x59a62E3DA22Ad9251fe4E0767E090Adc2B578651",
+          "amount": "0.004",
+          "blockNumber": 12156151,
+          "status": 1,
+          "gasUsed": "41110"
+        }
+      ]
+    }
+  ]
+}
